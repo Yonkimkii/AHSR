@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="MySQL - CS741-AHSR@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="2.6">
+    <schema id="1" name="CS741-AHSR">
+      <visible>1</visible>
+    </schema>
+    <schema id="2" name="CradleToCrayons"/>
+    <schema id="3" name="CredalToCrayons"/>
+    <schema id="4" name="cs743_guo"/>
+    <schema id="5" name="information_schema"/>
+    <schema id="6" name="mysql"/>
+    <schema id="7" name="performance_schema"/>
+    <schema id="8" name="sys"/>
+    <table id="9" parent="1" name="Bus"/>
+    <table id="10" parent="1" name="Route"/>
+    <table id="11" parent="1" name="Security"/>
+    <table id="12" parent="1" name="Stops"/>
+    <table id="13" parent="1" name="User"/>
+    <table id="14" parent="1" name="schdule"/>
+    <column id="15" parent="9" name="idBus">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="16" parent="9" name="idRoute">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="17" parent="9" name="driver">
+      <data-type>varchar(45)|0</data-type>
+    </column>
+    <index id="18" parent="9" name="idBus_UNIQUE">
+      <columns>idBus</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="19" parent="9" name="PRIMARY">
+      <columns>idBus</columns>
+      <primary>1</primary>
+    </key>
+    <key id="20" parent="9" name="idBus_UNIQUE">
+      <columns>idBus</columns>
+      <underlying-index>idBus_UNIQUE</underlying-index>
+    </key>
+    <column id="21" parent="10" name="idRoute">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+      <sequence-identity>1</sequence-identity>
+    </column>
+    <column id="22" parent="10" name="nameRoute">
+      <data-type>varchar(45)|0</data-type>
+    </column>
+    <column id="23" parent="10" name="idBus">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <index id="24" parent="10" name="idRoute_UNIQUE">
+      <columns>idRoute</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="25" parent="10" name="PRIMARY">
+      <columns>idRoute</columns>
+      <primary>1</primary>
+    </key>
+    <key id="26" parent="10" name="idRoute_UNIQUE">
+      <columns>idRoute</columns>
+      <underlying-index>idRoute_UNIQUE</underlying-index>
+    </key>
+    <column id="27" parent="11" name="idSecurity">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="28" parent="11" name="questionSecurity">
+      <mandatory>1</mandatory>
+      <data-type>varchar(45)|0</data-type>
+    </column>
+    <key id="29" parent="11" name="PRIMARY">
+      <columns>idSecurity</columns>
+      <primary>1</primary>
+    </key>
+    <column id="30" parent="12" name="idStops">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="31" parent="12" name="nameStops">
+      <data-type>varchar(45)|0</data-type>
+    </column>
+    <key id="32" parent="12" name="PRIMARY">
+      <columns>idStops</columns>
+      <primary>1</primary>
+    </key>
+    <column id="33" parent="13" name="idUser">
+      <mandatory>1</mandatory>
+      <data-type>varchar(45)|0</data-type>
+    </column>
+    <column id="34" parent="13" name="passwordUser">
+      <mandatory>1</mandatory>
+      <data-type>varchar(45)|0</data-type>
+    </column>
+    <column id="35" parent="13" name="idSecurity1">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="36" parent="13" name="idSecurity2">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="37" parent="13" name="idSecurity3">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="38" parent="13" name="answerSecurity1">
+      <mandatory>1</mandatory>
+      <data-type>varchar(45)|0</data-type>
+    </column>
+    <column id="39" parent="13" name="answerSecurity2">
+      <mandatory>1</mandatory>
+      <data-type>varchar(45)|0</data-type>
+    </column>
+    <column id="40" parent="13" name="answerSecurity3">
+      <mandatory>1</mandatory>
+      <data-type>varchar(45)|0</data-type>
+    </column>
+    <column id="41" parent="13" name="email">
+      <data-type>varchar(45)|0</data-type>
+    </column>
+    <column id="42" parent="13" name="phone">
+      <data-type>varchar(45)|0</data-type>
+    </column>
+    <column id="43" parent="13" name="creditcard">
+      <data-type>varchar(45)|0</data-type>
+    </column>
+    <column id="44" parent="13" name="isAdm">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="45" parent="13" name="nameUser">
+      <mandatory>1</mandatory>
+      <data-type>varchar(45)|0</data-type>
+    </column>
+    <index id="46" parent="13" name="nameUser_UNIQUE">
+      <columns>nameUser</columns>
+      <desc-columns></desc-columns>
+      <unique>1</unique>
+    </index>
+    <key id="47" parent="13" name="PRIMARY">
+      <columns>idUser</columns>
+      <primary>1</primary>
+    </key>
+    <key id="48" parent="13" name="nameUser_UNIQUE">
+      <columns>nameUser</columns>
+      <underlying-index>nameUser_UNIQUE</underlying-index>
+    </key>
+    <column id="49" parent="14" name="idRoute">
+      <mandatory>1</mandatory>
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="50" parent="14" name="idBus">
+      <mandatory>1</mandatory>
+      <data-type>varchar(45)|0</data-type>
+    </column>
+    <column id="51" parent="14" name="idStops">
+      <mandatory>1</mandatory>
+      <data-type>varchar(45)|0</data-type>
+    </column>
+    <column id="52" parent="14" name="timeStops">
+      <data-type>varchar(45)|0</data-type>
+    </column>
+    <key id="53" parent="14" name="PRIMARY">
+      <columns>idRoute
+idBus
+idStops</columns>
+      <primary>1</primary>
+    </key>
+  </database-model>
+</dataSource>
