@@ -1,0 +1,9 @@
+ lsi: false
+ safe: true
+ source: [/Users/yonki/PhpstormProjects/untitled/register.html]
+ incremental: false
+ highlighter: rouge
+ gist:
+   noscript: false
+ kramdown:
+   math_engine: mathjax
